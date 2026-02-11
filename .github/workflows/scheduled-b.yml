@@ -1,4 +1,4 @@
-name: Scheduled B
+name: Scheduled B-1
 
 on:
   schedule:
@@ -12,8 +12,4 @@ jobs:
       - name: Request 1
         run: |
           c=$(curl -s -o /dev/null -w "%{http_code}" "${{ secrets.SCHEDULED_2 }}")
-          if [ "$c" -lt 200 ] || [ "$c" -ge 300 ]; then exit 1; fi
-      - name: Request 2
-        run: |
-          c=$(curl -s -o /dev/null -w "%{http_code}" "${{ secrets.SCHEDULED_3 }}")
           if [ "$c" -lt 200 ] || [ "$c" -ge 300 ]; then exit 1; fi
