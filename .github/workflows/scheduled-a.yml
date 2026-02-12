@@ -2,7 +2,7 @@ name: Scheduled A
 
 on:
   schedule:
-    - cron: '0,50 * * * *'
+    - cron: '0,30 * * * *'
   workflow_dispatch:
 
 jobs:
